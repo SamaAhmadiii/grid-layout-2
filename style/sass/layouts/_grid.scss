@@ -1,0 +1,10 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    @include responsive(tab-land){
+        grid-template-columns: 1fr 25rem;
+    }
+    @include responsive(big-desktop){
+        grid-template-columns: 7rem 1fr 30%;
+    }
+}

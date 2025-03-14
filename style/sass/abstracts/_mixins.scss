@@ -1,0 +1,37 @@
+
+
+
+
+
+@mixin responsive($breakpoint){
+    @if $breakpoint == mobile{
+        @media (min-width:600px) {
+            @content
+        };
+    }
+    @if $breakpoint == tab-por{
+        @media (min-width:768px) {
+            @content
+        };
+    }
+    @if $breakpoint == tab-land {
+        @media (min-width:900px) {
+            @content
+        };
+    }
+    @if $breakpoint == tab-land2 {
+        @media (min-width:1024px) {
+            @content
+        };
+    }
+    @if $breakpoint ==  big-desktop  {
+        @media (min-width:1200px) {
+            @content
+        };
+    }
+    @if $breakpoint ==  big-desktop2  {
+        @media (min-width:1400px) {
+            @content
+        };
+    }
+}

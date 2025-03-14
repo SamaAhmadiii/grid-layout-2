@@ -1,0 +1,89 @@
+.header{
+        background-image: linear-gradient(#0a1a2eee,#0a1a2eec) , url(../../../assets/images/hero.jpeg);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        &__logo1{
+            width: 10rem;
+            margin: $spacing-xxl auto;
+            &>img{
+                width:10rem;
+                @include responsive(big-desktop){
+                    width: 12rem;  
+                  }
+            }
+            @include responsive(big-desktop){
+              width: 12rem;  
+            }
+        }
+        &__text{
+            margin-top: 8rem;
+            color: #866a22;
+            margin-left: $spacing-sm;
+            @include responsive(big-desktop){
+                font-size: $spacing-sm;  
+            }
+        }
+        &__heading{
+            margin: $spacing-xs 0 $spacing-xs $spacing-sm;
+            width:60%;
+            color: $color-white;
+            font-weight: 400;
+            font-size: $spacing-lg;
+            @include responsive(big-desktop){
+                font-size: $spacing-3xl;  
+            }
+        }
+        &__btn{
+            padding: $spacing-xs $spacing-sm;
+            background-color: $color-primary;
+            color: $color-white;
+            margin-left: $spacing-sm;
+            margin-bottom: 15rem;
+            border: none;
+            cursor: pointer;
+            @include responsive(big-desktop){
+                font-size: $spacing-sm;  
+            }
+            &:hover{
+                background-color: $color-primary-dark;
+            }
+        }
+        &__seenon{
+            color: $color-grey2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include responsive(big-desktop){
+                font-size: $spacing-sm;  
+            }
+            &::before,&::after{
+                content: "";
+                flex: 1;
+                border-bottom: 1px solid  $color-grey2;
+                margin: 0 10px;
+            }
+            &::before{
+                @include responsive(big-desktop){
+                    margin: 0 2rem 0 6rem;  
+                }
+            }
+            &::after{
+                @include responsive(big-desktop){
+                    margin: 0 6rem 0 2rem;  
+                }
+            }
+            margin-bottom:$spacing-xs;
+        }
+        &__logo{
+            display: flex;
+            justify-content: space-around;
+            &>img{
+                width: $spacing-4xl;
+                @include responsive(big-desktop){
+                    width: $spacing-6xl; 
+                } 
+            }
+            padding-bottom: $spacing-sm;
+        }
+}

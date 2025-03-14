@@ -1,0 +1,53 @@
+.navigation{
+    background-color: #e4bf64;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: $spacing-xs1;
+    @include responsive(tab-land){
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+    }
+    @include responsive(big-desktop){
+        padding: $spacing-sm 0;
+        grid-column: 1/2;
+        grid-row: 1/6;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__btn{
+        cursor: pointer;
+        position: relative;
+        &,
+        &::before,
+        &::after{
+            border: none;
+            background-color: white;
+            display: inline-block;
+            width: 1.8rem;
+            height: 0.15rem;
+            border-radius: $spacing-sm;
+            @include responsive(big-desktop){
+                width: $spacing-xxl;
+                height: 0.3rem;
+            }
+        }
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0 ;
+        }
+        &::before{
+            top: -0.45rem;
+            @include responsive(big-desktop){
+               top:-0.8rem;
+            }
+        }
+        &::after{
+            bottom: -0.45rem;
+            @include responsive(big-desktop){
+                bottom:-0.8rem;
+             }
+        }
+    }
+}

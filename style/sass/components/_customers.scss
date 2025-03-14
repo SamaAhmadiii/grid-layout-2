@@ -1,0 +1,121 @@
+.customers{
+    background-color: #e8e7df;
+    margin: 2rem 0;
+    @include responsive(tab-land){
+        display: flex;
+        flex-direction: row-reverse;
+        grid-column: 1/-1;
+    }
+    @include responsive(big-desktop){
+        grid-column: 2/-1;
+    }
+    &__happy{
+        padding: $spacing-lg $spacing-md;
+        @include responsive(tab-land){
+            padding: $spacing-xxl $spacing-6xl;
+            flex-basis: 50%;
+        }
+        @include responsive(big-desktop){
+            padding: $spacing-xxl 7rem;
+        }
+    }
+    &__heading3{
+        color: $color-primary-light;
+        margin-bottom: $spacing-sm;
+        @include responsive(tab-land){
+            font-size: $spacing-sm;
+        }
+    }
+    &__heading1{
+        color: $color-primary-dark;
+        margin-bottom: $spacing-sm;
+        font-size: $spacing-lg;
+        @include responsive(tab-land){
+            font-size: $spacing-xl;
+        }
+        @include responsive(big-desktop){
+            font-size: $spacing-xxl;
+        }
+    }
+    &__text{
+        color:rgb(161, 160, 160);
+        margin-bottom: $spacing-sm;
+        font-size: 1.2rem;
+    }
+    &__btn{
+        padding: $spacing-xs $spacing-xs1;
+        background-color: $color-primary-light;
+        color: $color-white;
+        border: none;
+        cursor: pointer;
+            &:hover{
+                background-color: $color-primary-dark;
+            }
+    }
+    &__img{
+        width: 100%;
+        min-height:30rem;
+        background-image: linear-gradient(#e4c06479,#cda43e5e) ,url(../../../assets/images/back.jpg);
+        background-position:bottom;
+        background-size:cover;
+        background-repeat: no-repeat;
+        position: relative;
+        @include responsive(tab-land){
+            height: 100%;
+            flex-basis: 50%;
+        }
+        @include responsive(big-desktop){
+            height: 45rem;
+        }
+        &__1{
+            width:25rem;
+            position: absolute;
+            left: 5rem;
+            top: 4rem;
+            @include responsive(mobile){
+                width: 30rem;
+            }
+            @include responsive(tab-land){
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            @include responsive(big-desktop){
+                width: 40rem;
+            }
+            @include responsive(big-desktop2){
+                width: 45rem;
+            }
+        }
+        &__2{
+            position: absolute;
+            width:15rem;
+            z-index: 20;
+            left:23rem;
+            top: 9rem;
+            @include responsive(mobile){
+                width: 20rem;
+            }
+            @include responsive(tab-land){
+                width: 25rem;
+                left: 52%;
+                top: 50%;
+            }
+            @include responsive(tab-land2){
+                left: 60%;
+                top: 50%;
+            }
+            @include responsive(big-desktop){
+                width: 32rem;
+                left: 52%;
+                top:50%;
+             }
+             @include responsive(big-desktop2){
+                width: 37rem;
+                left: 52%;
+                top:45%;
+             }
+        }
+        
+    }
+}
