@@ -1,6 +1,7 @@
 .container{
     display: grid;
-    grid-template-columns: 1fr;
+   
+    grid-template-columns: minmax(30rem,1fr);
     @include responsive(tab-land){
         grid-template-columns: 1fr 25rem;
     }

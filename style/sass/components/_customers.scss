@@ -10,7 +10,7 @@
         grid-column: 2/-1;
     }
     &__happy{
-        padding: $spacing-lg $spacing-md;
+        padding: $spacing-lg $spacing-xs1;
         @include responsive(tab-land){
             padding: $spacing-xxl $spacing-6xl;
             flex-basis: 50%;
@@ -68,12 +68,13 @@
             height: 45rem;
         }
         &__1{
-            width:25rem;
+            width:20rem;
             position: absolute;
-            left: 5rem;
-            top: 4rem;
+            left: 3rem;
+            top: 8rem;
             @include responsive(mobile){
                 width: 30rem;
+                top: 15%;
             }
             @include responsive(tab-land){
                 top:50%;
@@ -91,10 +92,12 @@
             position: absolute;
             width:15rem;
             z-index: 20;
-            left:23rem;
-            top: 9rem;
+            left:15rem;
+            top: 10rem;
             @include responsive(mobile){
                 width: 20rem;
+                top:10rem;
+                left: 25rem;
             }
             @include responsive(tab-land){
                 width: 25rem;
